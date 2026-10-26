@@ -2645,12 +2645,16 @@
         }
       });
 
-      document.addEventListener("keydown", function (e) {
+         document.addEventListener("keydown", function (e) {
         if (e.key === "Escape" && popupOverlay.classList.contains("active")) {
           closePopup();
         }
       });
 
+      // ========== AUTO-OPEN BOOK APPOINTMENT POPUP ON WEBSITE LOAD ==========
+      openPopup();
+
+      // ========== BACKEND + RAZORPAY (Rs 1450, Orders API, verified) ==========
       // ========== BACKEND + RAZORPAY (Rs 1450, Orders API, verified) ==========
       const API_BASE = ""; // same origin - backend serves frontend on localhost:3000
       const APPOINTMENT_RS = 1450;
